@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-sub: #757575;
+            --accent: #b5a48b; /* Subtle gold/taupe */
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Serif font for headings to give a romantic/premium feel */
+        h1, .caption, .letter-text {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .gallery {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .memory-item {
+            margin-bottom: 100px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .memory-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .memory-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(20%); /* Softens the look */
+            transition: filter 0.5s ease;
+        }
+
+        .memory-item img:hover { filter: grayscale(0%); }
+
+        .caption {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: right;
+            color: var(--text-main);
+            border-right: 2px solid var(--accent);
+            padding-right: 15px;
+        }
+
+        .final-speech {
+            padding: 100px 40px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .letter-text {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            white-space: pre-line; /* Keeps your line breaks */
+            color: #333;
+            text-align: left;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-sub);
+            letter-spacing: 2px;
+        }
+
+        /* Scroll indicator */
+        .scroll-down {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>I built this for you</p>
+        <h1>Our History</h1>
+        <div class="scroll-down">↓</div>
+    </header>
+
+    <div class="gallery" id="gallery">
+        </div>
+
+    <section class="final-speech">
+        <div class="letter-text">
+            To my babe,
+
+They say a picture is worth a thousand words, but to me, every photo here is just another way of saying 'I love you.'
+
+From the moment I slid into your DMs on December 5th, 2023, my life changed forever. We have faced the highs and the lows, weaving our stories together until they became one. We have talked about our future since the very beginning, and every day since has only made me more certain: I don't ever want to let you go.
+
+I am so grateful for the life we have built so far, but I am even more excited for the life we have yet to create. Do you want to do this better together with me?" 
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026.
+    </footer>
+
+    <script>
+        // EASILY ADD YOUR PHOTOS HERE
+        // Just put the filename (e.g., '1.jpg') and your caption.
+        const memories = [
+            { src: '1.jpg', caption: '' },
+            { src: '2.jpg', caption: '' },
+            { src: '3.jpg', caption: '' },
+            { src: '4.jpg', caption: ''},
+			  { src: '5.jpg', caption: ''},
+			  { src: '6.jpg', caption: ''},
+			  { src: '7.jpg', caption: ''},
+			  { src: '8.jpg', caption: ''},
+			  { src: '9.jpg', caption: ''},
+			  { src: '10.jpg', caption: ''},
+			  { src: '11.jpg', caption: ''},
+			  { src: '12.jpg', caption: ''},
+			  { src: '13.jpg', caption: ''},
+			  { src: '14.jpg', caption: ''},
+			  { src: '15.jpg', caption: ''},
+			  { src: '16.jpg', caption: ''},
+			  { src: '17.jpg', caption: ''},
+			  { src: '18.jpg', caption: ''},
+			  { src: '19.jpg', caption: ''},
+			  { src: '20.jpg', caption: ''},
+			  { src: '21.jpg', caption: ''},
+			  { src: '22.jpg', caption: ''},
+			  { src: '23.jpg', caption: ''},
+			  { src: '24.jpg', caption: ''},
+			  { src: '25.jpg', caption: ''},
+			  { src: '26.jpg', caption: ''},
+			  { src: '27.jpg', caption: ''},
+			  { src: '28.jpg', caption: ''},
+			  { src: '29.jpg', caption: ''},
+			  { src: '30.jpg', caption: ''},
+			  { src: '31.jpg', caption: ''},
+            { src: '32.jpg', caption: ''},           
+            { src: '33.jpg', caption: ''}
+			  ];
+
+        const gallery = document.getElementById('gallery');
+
+        // Function to create gallery items
+        memories.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'memory-item';
+            div.innerHTML = `
+                <img src="${item.src}" alt="Memory">
+                <div class="caption">${item.caption}</div>
+            `;
+            gallery.appendChild(div);
+        });
+
+        // Intersection Observer for the fade-in effect
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.memory-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
